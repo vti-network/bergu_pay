@@ -1,0 +1,81 @@
+/* Mynav.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f79605;
+  color: black;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.navbar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f79605;
+}
+
+.navbar a {
+  display: block;
+  color: black;
+  text-align: left;
+  padding: 10px 0;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  background-color: #e6b265;
+}
+.toggle-input {
+  display: none;
+}
+
+.toggle-btn {
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: right;
+}
+
+.toggle-btn:hover {
+  /* background-color: #f3d656; */
+  color: black;
+  border-radius: 5px;
+}
+
+.toggle-btn::before {
+  content: '\2630';
+}
+
+#toggle:checked ~ .navbar {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    background-color: transparent;
+  }
+
+  .navbar .a {
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .navbar .a:hover {
+    background-color: #e7a94d;
+  }
+
+  .toggle-input,
+  .toggle-btn {
+    display: none;
+  }
+}
